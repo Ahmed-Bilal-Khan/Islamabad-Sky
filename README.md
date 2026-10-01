@@ -66,3 +66,13 @@ npm run build:lib  # component only → dist-lib/ (ES module + types, React exte
 ```
 
 The component lives entirely in `src/sky/` and needs no stylesheet. To use it elsewhere, copy that folder or use the `dist-lib` build.
+
+## Deploy (Cloudflare Pages)
+
+From the terminal, after signing in once with `npx wrangler login`:
+
+```bash
+npm run deploy
+```
+
+Or connect this GitHub repo in the Cloudflare dashboard (**Workers & Pages → Create → Pages → Connect to Git**) with build command `npm run build` and output directory `dist`. Node 22 is pinned in `.node-version`.

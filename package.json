@@ -8,7 +8,8 @@
     "build": "tsc -b && vite build",
     "lint": "oxlint",
     "preview": "vite preview",
-    "build:lib": "vite build -c vite.lib.config.ts && tsc -p tsconfig.lib.json"
+    "build:lib": "vite build -c vite.lib.config.ts && tsc -p tsconfig.lib.json",
+    "deploy": "npm run build && npx wrangler@4 pages deploy dist --project-name islamabad-sky"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.3",
